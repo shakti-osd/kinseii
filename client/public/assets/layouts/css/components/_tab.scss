@@ -1,0 +1,20 @@
+.radio-style{
+  border: 0;
+  li{
+    margin-right: 15px;
+    a{
+      min-width: 100px;
+      height: 40px;
+      padding: 0 12px;
+      @include flexbox;
+      @include align-items(center);
+      @include justify-content(center);      
+      @include border-radius(20px);
+      border: 1px solid #9fa8ad;
+      &.active{
+        border-color: #ff4c01;
+        box-shadow: 0px 0px 8px #fbcfbc;
+      }
+    }
+  }
+}

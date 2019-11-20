@@ -1,0 +1,223 @@
+.app-sidebar {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  z-index: 12;
+  padding-top: $header-height;
+  background: $sidebar-bkg;                                                           
+  @include transition(all 0.3s ease-in-out);
+  @media (min-width: 768px){
+    position: fixed;    
+  }
+  @media (max-width: 767px){
+    position: fixed;   
+  }
+  .app-sidebar-menu{
+    @include list-unstyled;
+    padding-top: 20px;
+    >li{
+      >a{
+        height: 62px;
+        font-size: $sidebar-menu-font-size;
+        color: $sidebar-menu-font-color;
+        display: block;
+        margin: 0 0 2px 0;
+        position: relative;
+        padding: 0 0 0 20px;
+        @include flexbox;
+        @include align-items(center);  
+        span{
+          &.title{
+            height: 19px;
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            @include transition(all 0.3s ease-in-out);
+          }
+        }
+        >i{            
+          width: 22px;
+          height: 22px;
+          min-width: 22px;
+          display: block;
+          margin-right: 10px;
+          background: url(../img/sprites.png) no-repeat;
+          &.home-icon{
+            background-position: 0 0; 
+          } 
+          &.schedule-icon{
+            background-position: 0 -24px; 
+          }     
+          &.purchase-icon{
+            background-position: 0 -48px; 
+          }   
+          &.customer-icon{
+            background-position: 0 -76px; 
+          }   
+          &.listing-icon{
+            background-position: 0 -100px; 
+          }   
+          &.settings-icon{
+            background-position: 0 -122px; 
+          }        
+        }
+        &:before{
+          width: 0px;
+          left: 0px;
+          top: 0px;
+          bottom: 0px;
+          z-index: -1;
+          content: "";
+          position: absolute;
+          background: $sidebar-menu-bkg;
+          @include transition(all 0.3s ease-in-out);
+        }                   
+      }  
+      &:hover,
+      &.active {
+        a{
+          color: $sidebar-menu-font-hover-color;
+          i{
+            &.home-icon{
+              background-position: -29px 0; 
+            } 
+            &.schedule-icon{
+              background-position: -29px -24px; 
+            }     
+            &.purchase-icon{
+              background-position: -29px -48px; 
+            }   
+            &.customer-icon{
+              background-position: -29px -76px; 
+            }   
+            &.listing-icon{
+              background-position: -29px -100px; 
+            }   
+            &.settings-icon{
+              background-position: -29px -122px; 
+            } 
+          }
+          &:before{
+            width: 100%;
+          }
+        }
+      }                
+    }  
+  }
+}
+
+.app-sidebar-closed {
+  .app-sidebar{
+    width: 64px;
+    .app-sidebar-menu{
+      >li{
+        >a{
+          width: 70px;
+          padding-right: 0;
+          &:before{
+            left: -6px;
+          }
+          span{
+            &.title{
+              left: 70px;
+              color: #fff;
+              display: none;
+              min-width: 120px;
+              background: #223641;
+              padding: 10px 20px;
+              position: absolute;
+              white-space: nowrap;
+              @include transition(all 0.25s ease-in-out);
+            }
+            &:before{
+              top: 0;
+              bottom: 0;
+              left: -8px;
+              width: 0;
+              height: 0;
+              content: '';
+              margin: auto;
+              position: absolute;
+              border-right: 8px solid #223641;
+              border-top: 8px solid transparent;
+              border-bottom: 8px solid transparent;
+            }
+          }
+        }
+        &:hover{
+          >a{
+            span{
+              &.title{
+                height: auto;
+                display: inline;
+                overflow: visible;
+                padding-left: 15px;
+              }
+            }
+          }
+        }  
+      }  
+    }
+  }      
+}
+
+@media (max-width: 767px){
+  .app-sidebar{
+    width: 64px;
+    .app-sidebar-menu{
+      >li{
+        >a{
+          width: 70px;
+          padding-right: 0;
+          &:before{
+            left: -6px;
+          }
+          span{
+            &.title{
+              left: 70px;
+              color: #fff;
+              display: none;
+              min-width: 120px;
+              background: #223641;
+              padding: 10px 20px;
+              position: absolute;
+              white-space: nowrap;
+              @include transition(all 0.25s ease-in-out);
+            }
+            &:before{
+              top: 0;
+              bottom: 0;
+              left: -8px;
+              width: 0;
+              height: 0;
+              content: '';
+              margin: auto;
+              position: absolute;
+              border-right: 8px solid #223641;
+              border-top: 8px solid transparent;
+              border-bottom: 8px solid transparent;
+            }
+          }
+        }
+        &:hover{
+          >a{
+            span{
+              &.title{
+                height: auto;
+                display: inline;
+                overflow: visible;
+                padding-left: 15px;
+              }
+            }
+          }
+        }  
+      }  
+    }
+  }
+  .app-sidebar-closed {
+    .app-sidebar{
+      left: -150px;
+    }
+  } 
+}

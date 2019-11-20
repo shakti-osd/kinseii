@@ -1,0 +1,163 @@
+.btn{
+  padding: 8px 16px;
+  font-size: $btn-font-size;
+  box-shadow: none !important;
+  @include border-radius(100px);
+  @include transition(all 0.3s ease-in-out);
+  &.flex{
+    width: 100%;
+  }
+  &.blue{    
+    &:not(.outline){      
+      color: $blue-btn-font-color;
+      background: $blue-btn-bkg;
+      border-color: $blue-btn-border-color;
+      &.active,
+      &:hover{
+        color: $blue-btn-font-color;
+        background: $blue-btn-hover-bkg;
+        border-color: $blue-btn-hover-border-color;
+      }
+    }
+  }
+  &.white{    
+    min-width: 120px;
+    &:not(.outline){      
+      color: $white-btn-font-color;
+      background: $white-btn-bkg;
+      border-color: $white-btn-border-color;
+      &.active,
+      &:hover{
+        color: $white-btn-font-color;
+        background: $white-btn-hover-bkg;
+        border-color: $white-btn-hover-border-color;
+      }
+    }
+  }
+  &.grey{    
+    min-width: 120px;
+    &:not(.outline){  
+      background: #dbdbdc;
+      border-color: #dbdbdc;
+      &.active,
+      &:hover{       
+        background: #dbdbdc;
+        border-color: #dbdbdc;
+      }
+    }
+  }
+  &.orange{
+    min-width: 120px;    
+    &:not(.outline){      
+      color: $orange-btn-font-color;
+      background: $orange-btn-bkg;
+      border-color: $orange-btn-border-color;
+      &.active,
+      &:hover{
+        color: $orange-btn-font-color;
+        background: $orange-btn-hover-bkg;
+        border-color: $orange-btn-hover-border-color;
+      }
+    }
+    &.outline{      
+      color: $orange-outline-btn-font-color;
+      background: $orange-outline-btn-bkg;
+      border-color: $orange-outline-btn-border-color;
+      &.active,
+      &:hover{
+        color: $orange-outline-btn-font-color;
+        background: $orange-outline-btn-hover-bkg;
+        border-color: $orange-outline-btn-hover-border-color;
+      }
+    }
+  }
+  &.yellow{    
+    &:not(.outline){      
+      color: $yellow-btn-font-color;
+      background: $yellow-btn-bkg;
+      border-color: $yellow-btn-border-color;
+      &.active,
+      &:hover{
+        color: $yellow-btn-font-color;
+        background: $yellow-btn-hover-bkg;
+        border-color: $yellow-btn-hover-border-color;
+      }
+    }
+    &.outline{      
+      color: $yellow-outline-btn-font-color;
+      background: $yellow-outline-btn-bkg;
+      border-color: $yellow-outline-btn-border-color;
+      &.active,
+      &:hover{
+        color: $yellow-outline-btn-font-color;
+        background: $yellow-outline-btn-hover-bkg;
+        border-color: $yellow-outline-btn-hover-border-color;
+      }
+    }
+  }
+
+}
+
+
+
+.owl-theme .owl-controls .owl-page span{
+  opacity: 0.2;
+  background: #213540;
+}
+
+.dropdown-btn{
+  position: relative;
+  display: inline-block;
+  .dropdown-toggle{
+    min-width: 215px;
+    @media(max-width: 900px){
+      min-width: 140px;
+    }
+    @media(max-width: 400px){
+      min-width: 120px;
+    }
+    &:after{
+      border: 0;
+      font: normal normal normal 14px/1 FontAwesome;
+      content: "\f107";
+      vertical-align: 0;
+      left: 4px;
+      position: relative;
+    } 
+  }
+  .dropdown-menu{
+    border: 0;
+    padding: 0;
+    min-width: 100%;
+    overflow: hidden;
+    @include border-radius(10px);
+    box-shadow: $regular-box-shadow;
+    .nav{
+      li{
+        width: 100%;
+        a{
+          display: block;
+          font-size: 14px;
+          padding: 8px 16px;
+          border-bottom: 1px solid #dde1e4;          
+          &:hover{
+            color: $orange-btn-font-color;
+            background: $orange-btn-bkg;
+          }
+        }
+        &:last-child{
+          a{
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  &.show{
+    .dropdown-toggle{
+      &:after{
+        content: "\f106";
+      }
+    }
+  }
+}

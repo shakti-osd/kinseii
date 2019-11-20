@@ -1,0 +1,33 @@
+@import "components/variable.scss";
+@import "components/mixin.scss";
+@import "../../plugins/owlcarousel/css/owl-carousel.scss";
+@import "components/table.scss";
+@import "components/flexbox.scss";
+@import "components/reset.scss";
+@import "components/btns.scss";
+@import "components/form.scss";
+@import "components/modal.scss";
+@import "components/tooltip.scss";
+@import "components/checkbox-radio.scss";
+@import "components/search.scss";
+@import "components/loader.scss";
+@import "components/fonts.scss";
+@import "components/portlets.scss";
+@import "components/range.scss";
+@import "components/tab.scss";
+@import "components/pagination.scss";
+@import "components/range.scss";
+@import "../../plugins/font-awesome/scss/font-awesome.scss";
+@import "../../plugins/material-design-iconic-font/css/material-design-iconic-font.css";
+@import "../../plugins/simple-line-icons-master/css/simple-line-icons.css";
+
+@import "layout/header.scss";
+@import "layout/sidebar.scss";
+@import "layout/layout.scss";
+@import "layout/head.scss";
+@import "layout/bundle.scss";
+@import "layout/footer.scss";
+
+@import "pages/login.scss";
+@import "pages/scheduler.scss";
+@import "pages/dashboard.scss";

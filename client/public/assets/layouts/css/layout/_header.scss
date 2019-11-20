@@ -1,0 +1,100 @@
+.app-header{
+	height: $header-height;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 99;
+	padding: 0 22px;
+	position: fixed;
+	background: $regular-color;
+	@include flexbox;
+	@include align-items(center);
+	.app-logo{
+		@include flex(1);
+	}
+	.menu-trigger {
+	  width: 24px;
+	  height: 24px;
+	  cursor: pointer;
+	  margin-right: 20px;
+	  position: relative;  
+	  z-index: 10;
+	  i{
+	  	height: 2px;
+	  	display: block;
+	  	top: 11px;
+	    position: relative;
+	  	background: #223543;
+	  	&:after {
+		    top: -6px;
+		    left: 0;
+		    width: 24px;
+		    height: 2px;
+		    content: "";
+		    position: absolute;
+		    background: #223543;
+		    @include transition(all 0.3s ease-in-out);
+		  }
+		  &:before {
+		    top: 6px;
+		    left: 0;
+		    width: 24px;
+		    height: 2px;
+		    content: "";
+		    position: absolute;
+		    background: #223543;
+		   @include transition(all 0.3s ease-in-out);
+		  }
+	  }
+	  &.active{
+	  	i{
+	  		background: #fff;
+	  		&:before{
+	    		top: 0;
+	  			transform: rotate(-45deg);
+	  		}
+	  		&:after{
+	    		top: 0;
+	  			transform: rotate(45deg);
+	  		}
+	  	}
+	  }  
+	}
+	.app-top{
+		@include flexbox;
+		@include align-items(center);	
+		.dropdown-user{
+			.navbar{
+				padding: 0;
+			}
+			.dropdown-toggle::after{
+				display: none;
+			}
+			.dropdown-menu{
+				border: 0;
+				padding: 0;
+				overflow: hidden;
+				margin-top: 16px;
+				@include border-radius(0 0 10px 10px);
+				box-shadow: $regular-box-shadow;	
+				li{					
+					width: 100%;
+					a{
+	          display: block;
+	          font-size: 13px;
+	          padding: 12px 16px;
+	          border-bottom: 1px solid #dde1e4;
+	          &:last-child{
+	            border-bottom: 0;
+	          }
+	          &:hover{
+	            color: $orange-btn-font-color;
+	            background: $orange-btn-bkg;
+	          }
+	        }
+				}	
+			}
+		}
+	}
+}
+

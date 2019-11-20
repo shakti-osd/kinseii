@@ -1,0 +1,122 @@
+.scheduler-data{
+	.fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-list-heading td, .fc-unthemed .fc-list-view, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead{
+		border-color: $base-color-1; 
+	}
+	.fc-toolbar.fc-header-toolbar{
+		top: -51px;
+		margin: 0;
+		z-index: 2;
+		position: relative;
+		.fc-button{
+			color: $orange-btn-font-color;
+      background: $orange-btn-bkg;
+      border-color: $orange-btn-border-color;
+      box-shadow: none !important;	  
+      text-shadow: none;
+		  @include transition(all 0.3s ease-in-out);
+		  &.fc-state-active{
+		  	background: #e45013;
+    		border-color: #e45013;
+		  }
+		  &.fc-agendaWeek-button{
+		    width: 40px;
+		  	height: 27px;
+		    font-size: 0;
+		  	&:before{
+		  		top: -1px;
+			  	content: "\f073";
+			  	position: relative;
+	    		font: normal normal normal 14px/1 FontAwesome;
+			  }
+		  }
+		  &.fc-listWeek-button{
+		    width: 40px;
+		  	height: 27px;
+		    font-size: 0;
+		  	&:before{
+			  	content: "\f03a";
+	    		font: normal normal normal 14px/1 FontAwesome;
+			  }
+		  }
+		}
+		.fc-corner-left{
+			@include border-radius(100px 0 0 100px);
+		}
+		.fc-corner-right{
+			@include border-radius(0 100px 100px 0);
+		}
+		.fc-corner-left.fc-corner-right{
+			@include border-radius(100px);
+		}	
+		h2{
+			font-size: 20px;
+			font-family: $secondary-font-stack;
+		}	
+		@media(max-width: 500px){
+			top: 0;				
+			.fc-center{
+				float: left;
+    		width: 100%;
+    		margin: 12px 0;
+    		h2{
+    			float: none;
+					font-size: 16px;
+				}
+			}		
+		}
+		@media(max-width: 320px){
+			.fc-left,
+			.fc-right{
+				width: 100%;
+				margin-bottom: 6px;
+			}			
+		}
+	}
+	.fc-view-container{
+		top: -18px;
+		position: relative;
+		@media(max-width: 500px){
+			top: 0;
+		}
+		table{
+			tr{
+				th{
+					font-weight: normal;
+					padding-top: 6px;
+					padding-bottom: 6px;
+				}
+			}
+		}		
+	}
+	.fc-list-table{
+		tr{
+			td{
+				padding: 10px 12px;
+			}
+		}
+		.fc-list-heading td{
+			font-size: 14px;
+			font-weight: normal;
+		}
+	}
+	.fc-unthemed .fc-divider, .fc-unthemed .fc-list-heading td, .fc-unthemed .fc-popover .fc-header{
+		background: rgba(255,255,255,0.2);
+	}
+	.fc-unthemed td.fc-today{
+		background: rgba(255,255,255,0.3);
+	}
+	.fc-unthemed .fc-list-item:hover td{
+		background: rgba(255,255,255,0.4);
+	}
+	.fc-has-url{
+		.fc-list-item-title a[href]{
+			text-decoration: underline;			
+		}
+		&:hover{
+			.fc-list-item-title a[href]{
+				text-decoration: none;
+			}
+		}
+	}		
+}
+

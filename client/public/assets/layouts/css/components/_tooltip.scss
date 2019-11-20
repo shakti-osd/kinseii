@@ -1,0 +1,19 @@
+.tooltip{
+	&.bs-tooltip-bottom{
+		opacity: 1;
+		.arrow{
+			&:before{
+				border-bottom-color: $regular-color;
+			}
+		}
+		.tooltip-inner{
+			padding: 18px;
+			max-width: 390px;	
+			text-align: left;
+			position: relative;
+		  color: $tooplip-font-color;
+			background: $regular-color;
+			box-shadow: $regular-box-shadow;
+		}
+	}
+}

@@ -1,0 +1,110 @@
+.range-gutter{
+  font-size: 15px;
+  @include flexbox;    
+  @include align-items(center); 
+  *{
+    box-shadow: none !important;
+  }
+  .slider-handle{
+    width: 22px;
+    background: #2c98f0;
+  }
+
+  .slider.slider-horizontal .slider-track{
+    height: 4px;
+    margin-top: -2px;
+  }
+
+  .slider-selection{
+    background: #2c98f0;
+  }
+
+  .slider-track{
+    background: #e7eaf6;
+  }
+  .slider {
+    margin: 0 12px;
+  }
+}
+
+
+.tooltip{
+  &.in{
+    opacity: 1;
+  }
+}
+
+.range-ember{
+  .ui-slider-horizontal {
+    height: 15px;
+  }
+  .value {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    margin: 0 0 0 -20px;
+    width: 40px;
+    text-align: center;
+    display: block;
+    
+    /* optional */
+    
+    font-weight: normal;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .price-range-both.value {
+    width: 100px;
+    margin: 0 0 0 -50px;
+    top: 26px;
+  }
+
+  .price-range-both {
+    display: none; 
+  }
+
+  .value i {
+    font-style: normal;
+  }
+  div.ui-slider-range.ui-widget-header {
+      background: #428bca;
+  }
+  .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus{
+    background: #eee;
+  }
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+    background: #eee;
+    border-radius: 50%;
+    font-size:21px;
+    border: none;
+    box-shadow: 0 0 7px #306473;
+    &:focus{
+      outline: none;
+    }
+  }
+  span.ui-slider-handle.ui-corner-all.ui-state-default:focus {
+      outline: none;
+  }
+}
+
+.select-ember{
+  margin-top: 60px;
+  .group-data{
+    h3{
+      font-size: 16px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    ul{
+      display: none;
+      li{
+        a{
+          padding: 4px 0;      
+          display: inline-block;  
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.pagination-container{
+  .pagination{
+    margin: 20px 0;
+    border-radius: 20px;
+    display: inline-block;
+    border: 1px solid #b8bdc1;
+
+    li{
+      display: inline;
+      a{
+        float: left;
+        color: #233740;
+        padding: 9px 20px;
+        margin-left: -1px;
+        position: relative;  
+        border-right: 1px solid #b8bdc1;              
+      }
+      &.active{
+        a{
+          color: #fff;
+          background: #ff550f;
+          border-color: #ff550f;
+        }
+      }
+      &:last-child{
+        a{
+          border: 0;
+        }
+      }
+    }
+  }
+}

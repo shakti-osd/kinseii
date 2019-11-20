@@ -1,0 +1,167 @@
+.table-container{
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+table{
+  &.table{
+    margin-bottom: 0;
+    @media(max-width: 600px) {
+      white-space: nowrap;
+    }
+    thead{
+      tr{
+        th{          
+          font-weight: normal;
+          font-size: 15px;
+          padding: 16px 16px 16px 0px;
+          border: 0;
+          border-bottom: 1px solid #7c8389;
+          &:last-child{
+            padding-right: 0;
+          }
+        }
+      }
+    }
+    tbody{
+      tr{
+        td{
+          padding: 16px 16px 16px 0px;
+          border: 0;
+          border-bottom: 1px solid $base-color-1;
+          &:last-child{
+            padding-right: 0;
+          }
+        }
+        &:last-child{
+          td{
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+    &.middle{
+      tbody{
+        tr{
+          td{
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    &.btn-table{
+      tbody{
+        tr{
+          td{
+            &:last-child{
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.dataTable{
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+    border-bottom: 1px solid $base-color-1;
+    th{
+      &:before{
+        display: none !important;
+      }
+      &:after{
+        top: 0;
+        color: #4f6a73;
+        opacity:1 !important;
+        position: relative !important;
+        display: inline-block !important;
+        margin-left: 14px;
+        content: "\f175" !important;
+        font: normal normal normal 13px/1 FontAwesome;
+      }
+      &.sorting_asc{
+        &:after{
+          content: "\f176" !important;
+        }
+      }
+    }
+  }
+  figure.thumb{
+    max-width: 50px;
+    max-height: 50px;
+    border: 1px solid #b8bdc1;
+    @include border-radius(2px);
+  }
+}
+div.dataTables_wrapper div.dataTables_info{
+  padding: 0;
+  top: 18px;
+  position: relative;
+}
+div.dataTables_wrapper div.dataTables_paginate{
+  top: -10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  a{
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover{
+      text-decoration: none;
+    }
+    &.previous{
+      margin-right: 20px;
+    }
+    &.next{
+      margin-left: 20px;
+    }
+    &.disabled{
+      color: #5c7079;
+    }
+  }
+  span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a{
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include border-radius(100px);
+      text-decoration: none;
+      border: 1px solid transparent;
+      &.current{
+        border-color: #223641;
+      }
+    }
+  }
+}
+
+
+.datetimepicker td, .datetimepicker th{
+  font-size: 13px;
+}
+
+.datetimepicker th{
+  font-family: $primary-font-stack;
+}
+
+.glyphicon{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  &.glyphicon-arrow-right{
+    &:before{
+      content: "\f105";
+    }
+  }
+  &.glyphicon-arrow-left{
+    &:before{
+      content: "\f104";
+    }
+  }
+}

@@ -1,0 +1,77 @@
+.applet-container { 
+  margin-bottom: 30px;
+  @include border-radius(10px);
+  background: rgba(255,255,255,0.7);
+  .applet-head {
+    height: 62px;
+    z-index: 1;
+    padding: 0 20px;    
+    position: relative;
+    background: rgba(255,255,255,0.65);
+    @include flexbox;
+    @include align-items(center);
+    @include border-radius(10px 10px 0 0);
+    @media(max-width: 500px){
+      height: auto;
+      padding: 12px;
+      @include flex-direction(column);
+      h2{
+        margin: 0 0 4px 0 !important;
+      }
+    }
+    h2{
+      font-size: 20px;
+      margin-right: 20px;      
+      font-family: $secondary-font-stack;
+    } 
+    .actions{
+      margin-left: auto;
+      font-size: $font-size-sm;
+      @include flexbox;
+      @include align-items(center);  
+      @media(max-width: 500px){
+        margin: 0 auto;
+      }
+    }  
+  } 
+  .applet-sub{
+    padding: 20px;
+    background: rgba(255,255,255,0.3);
+    .nav-tabs{
+      border: 0;
+      @include flexbox;
+      @include align-items(center); 
+      @include justify-content(center);
+      li{
+        a{
+          border: 0;
+          background: transparent;
+          font-size: $btn-font-size;
+          @include border-radius(100px);
+          &:hover{
+            color: $orange-btn-bkg;
+          }
+          &.active{
+            color: $orange-btn-font-color;
+            background: $orange-btn-bkg;
+            border-color: $orange-btn-border-color;
+          }
+        }
+      } 
+    }
+  }  
+  .applet-body{
+    &:not(.alpha){
+      padding: 8px 20px;      
+    }
+    &.alpha{
+      background: rgba(255,255,255,0.9);
+    }
+  } 
+  .applet-foot{
+    padding: 18px 20px;
+    background: rgba(255,255,255,0.35);
+    @include border-radius(0 0 10px 10px);
+  }
+}
+

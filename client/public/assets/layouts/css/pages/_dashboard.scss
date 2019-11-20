@@ -1,0 +1,116 @@
+.app-dashboard{
+	.dash-items{
+		margin-bottom: 30px;
+		.box{
+			font-size: $font-size-sm;
+			color: $regular-font-color;
+			min-height: 190px;
+			position: relative;
+			overflow: hidden;
+			@include flexbox;
+			@include align-items(center);	
+			@include justify-content(center);	
+			@include flex-direction(column);
+			@include border-radius(10px);
+			@include transition(all 0.3s ease-in-out);			
+			@media(max-width: 1100px){
+				min-height: 150px;
+				margin-bottom: 16px;
+			}
+			h3{
+				font-size: $font-size-large;
+				margin-bottom: 12px;
+			}
+			p{
+				margin-bottom: 6px;
+			}
+			&:before{
+				top: 0px;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				content: "";
+				z-index: -1;
+				position: absolute;				
+				background-size: 108% !important;
+				@include transition(all 0.3s ease-in-out);	
+				@media(max-width: 1100px){
+					background-size: 180% !important;
+				}
+			}			
+			&.orange{
+				&:before{
+					background: url(../img/dash-orange.svg) no-repeat center center;	
+				}			
+			}
+			&.blue{
+				&:before{
+					background: url(../img/dash-blue.svg) no-repeat center center;
+				}				
+			}
+			&.green{
+				&:before{
+					background: url(../img/dash-green.svg) no-repeat center center;		
+				}		
+			}
+			&.yellow{
+				&:before{
+					background: url(../img/dash-yellow.svg) no-repeat center center;	
+				}			
+			}
+			&:hover{
+				transform: scale(0.98);
+				&:before{
+					transform: scale(1.5);
+				}
+			}
+		}
+	}
+	.dash-slide{
+		overflow: hidden;
+		padding-bottom: 20px;
+		margin-bottom: 30px;
+		@include border-radius(10px);
+    background: rgba(255,255,255,0.9);
+    figure{
+    	overflow: hidden;
+    	max-height: 220px;
+	    img{
+	    	width: 100%;
+	    }
+	  }
+	  .cnt{
+	  	color: #516973;
+	  	font-size: $font-size-sm;
+	  	line-height: $regular-line-height;
+	  	padding: 26px 26px 0 26px;
+		  h2{
+		  	color: #223641;
+	      font-size: 20px;
+	      margin-bottom: 12px;
+	      font-family: $secondary-font-stack;
+	    } 
+	  }
+	  .owl-page{
+	  	span{
+			  width: 8px;
+		    height: 8px;
+		   	margin: 5px 6px;
+	  	}
+	  }
+	}
+
+	.dash-perform{
+		.applet-body{
+			padding-top: 20px;
+			padding-bottom: 20px;
+			.brdr{
+				border-right: 1px solid #c5c4c9;
+				@media(max-width: 800px){
+					border-right: 0;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
